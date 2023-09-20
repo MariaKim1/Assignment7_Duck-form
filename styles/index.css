@@ -5,23 +5,21 @@ body {
     background-color: rgba(157, 190, 187, 1);
 }
 
-/*section {
-    display: flex;
-}*/
+
+
+/* ------ DUCK-FORM "BACKGROUND" STYLING */
 
 .form_layout {
-    /*max-width: 1299px;
-    width: 100%;
-    min-height: 594px;*/
     display: flex;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
 }
 
 .yellow-area {
     max-width: 345px;
     width: 100%;
     min-height: 594px;
-    /*margin-top: 153px;
-    margin-left: 852px;*/
     background-color: rgba(255, 176, 57, 1);
 }
 
@@ -29,8 +27,6 @@ body {
     max-width: 954px;
     width: 100%;
     min-height: 594px;
-    /*margin-top: 153px;
-    margin-left: 243px;*/
     background-color: rgba(190, 9, 9, 1);
 
     font-family: 'Roboto', sans-serif;
@@ -40,23 +36,80 @@ body {
     line-height: 21px;
     letter-spacing: 0.1em;
     text-align: left;
-
-    display: flex;
 }
+
+
+
+/* ----- FORM STYLING ----- */
 
 .duck-form {
-    padding: 40px; 
-
+    padding: 60px;
 }
 
-button {
-    /*display: flex;
-    justify-content: center;*/
+input[type=text] {
+    width: auto;
+    padding: 10px 10px; 
+    border: none;
+    border-bottom: 1px solid rgba(157, 190, 187, 1);
+    background-color: rgba(190, 9, 9, 1);
+    color: rgba(252, 255, 255, 1);
+}
+
+input[type=email] {
+    width: auto;
+    padding: 12px; 
+    border: none;
+    border-bottom: 1px solid rgba(157, 190, 187, 1);
+    background-color: rgba(190, 9, 9, 1); 
+    color: rgba(252, 255, 255, 1);
+}
+
+textarea {
+    width: auto;
+    padding: 12px; 
+    border: none;
+    border-bottom: 1px solid rgba(157, 190, 187, 1);
+    background-color: rgba(190, 9, 9, 1);
+    color: rgba(252, 255, 255, 1);
+}
+
+label {
+    cursor: auto;
+}
+
+input:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(252, 255, 255, 1);
+}
+
+textarea:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(252, 255, 255, 1);
+}
+
+::placeholder {
+    color: rgba(223, 237, 237, 0.638);
+}
+
+/* ---- DUCK img. PLACEMENT ---- */
+
+.duck {
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -550px;
+}
+/* QUESTION: Is it ok to use large margins with the position property? */
+
+
+
+/* ------ BUTTON STYLING ------ */
+
+/* design styles */ 
+button 
+{      
     background-color: rgba(70, 129, 137, 1);
     width: 202px;
     height: 48px;
-    top: 635px;
-    left: 407px;
     border-radius: 40px;
     border: none;
 
@@ -67,5 +120,30 @@ button {
     line-height: 21px;
     letter-spacing: 0.1em;
     text-align: center;   
+
+    cursor: pointer;
 }
-/* QUESTION: Not sure how to only center the button since it is supposed to be on the same form-tag as the rest of the form. */
+
+/* hover effect */
+button:hover {
+    background-color: rgb(61, 144, 153);
+}
+
+.button:disabled {
+	background-color: #dfdfdc;
+	color: rgb(226, 247, 247);
+	opacity: 0.6;
+}
+
+/* button <div> - placement & sizs styles */ 
+.btn 
+{    
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* ------ VALIDATION STYLES ------ */
+/* QUESTION: Wanted to do more with validation.. but the pop-up errors were all default style so I got confused..
+    Not really sure if I did this part enough or correct? Also running out of time so I haven't had much time to look into it.*/
